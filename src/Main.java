@@ -1,5 +1,5 @@
 
-import javax.swing.tree.DefaultTreeCellEditor;
+
 import java.time.LocalDate;
 
 public class Main {
@@ -54,7 +54,6 @@ public class Main {
     public static void printTimeDelivery (int distance){
         if (distance > 0 && distance < 2000 ){
             System.out.println( " Время доставки  = " + ((distance+19)/40+1));
-            return;
         }else{
             throw new RuntimeException(" Доставка меньше 0 км и свыше 2000 км не осуществляется");
         }
