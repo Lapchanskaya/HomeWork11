@@ -1,4 +1,5 @@
 
+import javax.swing.tree.DefaultTreeCellEditor;
 import java.time.LocalDate;
 
 public class Main {
@@ -48,6 +49,17 @@ public class Main {
             System.out.println(" Установите lite версию для Вашего " + identificationOs(versionOS)) ;
         }
     }
+    // Задание 3 Метод 1
+    // Печать дистанции и времени доставки
+    public static void printTimeDelivery (int distance){
+        if (distance > 0 && distance < 2000 ){
+            System.out.println( " Время доставки  = " + ((distance+19)/40+1));
+            return;
+        }else{
+            throw new RuntimeException(" Доставка меньше 0 км и свыше 2000 км не осуществляется");
+        }
+
+    }
 
 
     public static void main(String[] args) {
@@ -58,6 +70,13 @@ public class Main {
     // Задание 2
         System.out.println( " Задание 2");
         printVersionOS( 2022, 0);
+    // Задание 3
+        System.out.println( " Задание 3");
+
+        printTimeDelivery( 17);
+        printTimeDelivery( 25);
+        printTimeDelivery( -61);
+        printTimeDelivery( 2050);
 
 
     }
